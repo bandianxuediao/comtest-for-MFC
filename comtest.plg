@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: comtest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/comtest.res" /d "_DEBUG" /d "_AFXDLL" "K:\WORK\安能\comtest\comtest.rc"" 
+Creating temporary file "C:\Users\XIAOMI~1\AppData\Local\Temp\RSPA10.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/comtest.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"K:\WORK\安能\comtest\comtest.cpp"
+"K:\WORK\安能\comtest\comtestDlg.cpp"
+"K:\WORK\安能\comtest\mscomm.cpp"
+]
+Creating command line "cl.exe @C:\Users\XIAOMI~1\AppData\Local\Temp\RSPA10.tmp" 
+Creating temporary file "C:\Users\XIAOMI~1\AppData\Local\Temp\RSPA11.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/comtest.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"K:\WORK\安能\comtest\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\XIAOMI~1\AppData\Local\Temp\RSPA11.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/comtest.pdb" /debug /machine:I386 /out:"Debug/comtest.exe" /pdbtype:sept  ".\Debug\comtest.obj" ".\Debug\comtestDlg.obj" ".\Debug\mscomm.obj" ".\Debug\StdAfx.obj" ".\Debug\comtest.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+comtest.cpp
+comtestDlg.cpp
+mscomm.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/comtest.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\comtest.sbr" ".\Debug\comtestDlg.sbr" ".\Debug\mscomm.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+comtest.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
