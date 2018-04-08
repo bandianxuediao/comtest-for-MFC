@@ -185,25 +185,26 @@ void CComtestDlg::OnBtnOpen()
 	if(m_Comm1.GetPortOpen())
 	{
 		m_Comm1.SetPortOpen(FALSE);
-		SetDlgItemText(IDC_BtnOpen,"点击打开");
+		SetDlgItemText(IDC_BtnOpen, "点击打开");
 	}
 	else
 	{
-	
-	m_Comm1.SetCommPort(1); //选择com1，可根据具体情况更改
-	m_Comm1.SetInBufferSize(1024); //设置输入缓冲区的大小，Bytes
-	m_Comm1.SetOutBufferSize(1024); //设置输入缓冲区的大小，Bytes//
-	m_Comm1.SetSettings("9600,n,8,1"); //波特率9600，无校验，8个数据位，1个停止位
-	m_Comm1.SetInputMode(1); //1：表示以二进制方式检取数据
-	m_Comm1.SetRThreshold(1);
-	//参数1表示每当串口接收缓冲区中有多于或等于1个字符时将引发一个接收数据的OnComm事件
-	m_Comm1.SetInputLen(0); //设置当前接收区数据长度为0
 
-	if( !m_Comm1.GetPortOpen())
-		m_Comm1.SetPortOpen(TRUE);//打开串口
-	else
-		AfxMessageBox("cannot open serial port");
-	SetDlgItemText(IDC_BtnOpen,"点击关闭");
+		m_Comm1.SetCommPort(1); //选择com1，可根据具体情况更改
+		m_Comm1.SetInBufferSize(1024); //设置输入缓冲区的大小，Bytes
+		m_Comm1.SetOutBufferSize(1024); //设置输入缓冲区的大小，Bytes//
+		m_Comm1.SetSettings("9600,n,8,1"); //波特率9600，无校验，8个数据位，1个停止位
+		m_Comm1.SetInputMode(1); //1：表示以二进制方式检取数据
+		m_Comm1.SetRThreshold(1);
+		//参数1表示每当串口接收缓冲区中有多于或等于1个字符时将引发一个接收数据的OnComm事件
+		m_Comm1.SetInputLen(0); //设置当前接收区数据长度为0
+
+		if( !m_Comm1.GetPortOpen())
+			m_Comm1.SetPortOpen(TRUE);//打开串口
+		else
+			AfxMessageBox("cannot open serial port");
+
+		SetDlgItemText(IDC_BtnOpen, "点击关闭");
 		m_Comm1.GetInput();//先预读缓冲区以清除残留数据
 	}
 
@@ -251,7 +252,7 @@ void CComtestDlg::OnOnCommMscomm1()
 	}
 
 	//UpdateData(FALSE); //更新编辑框内容
-	SetDlgItemText(IDC_EditRxData, m_EditRxData); 
+	SetDlgItemText(IDC_EditRxData, m_EditRxData);
 	//不使用UpdateData(FALSE);的原因是该函数会
 	//刷新整个对话框的数据，而SetDlgItemText()
 	//只更新接收编辑框的数据。
