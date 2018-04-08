@@ -13,7 +13,7 @@
 // m_Comm1 wrapper class
 
 class m_Comm1 : public CWnd
-{
+{ 
 protected:
 	DECLARE_DYNCREATE(m_Comm1)
 public:
